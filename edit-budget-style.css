@@ -1,0 +1,294 @@
+/* ===== Custom Scrollbar (Webkit browsers: Chrome, Edge, Safari) ===== */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0C1425; /* dark background */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color); /* neon cyan */
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00b8cc; /* brighter cyan on hover */
+}
+
+/* ===== Firefox scrollbar ===== */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) #0C1425;
+}
+
+:root {
+    --primary-color: #00e5ff;   /* neon cyan */
+    --secondary-color: #9ca3af; /* muted gray */
+    --success-color: #00ff9d;   /* neon green */
+    --warning-color: #ffb020;   /* amber */
+    --danger-color: #ff4c4c;    /* bright red */
+    --bg-dark: #0E1629;         /* deep black */
+    --card-bg: #1a1a1a;         /* dark card background */
+}
+
+body {
+    background-color: var(--bg-dark) !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* ===== Cards ===== */
+.card {
+    background-color: #182342 !important;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 229, 255, 0.08);
+    margin-bottom: 20px;
+    border: 1px solid rgba(255,255,255,0.05);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.card-header {
+    background-color: #182342 !important;
+    color: white !important;
+    font-weight: 600;
+    padding: 12px 16px;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+/* ===== Buttons ===== */
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    color: #0d0d0d;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: 0.2s ease;
+    cursor: pointer;
+    font-size: 9px !important;
+}
+
+.btn-primary:hover {
+    background-color: #00b8cc;
+    color: #fff;
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    background: transparent;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: #0d0d0d;
+}
+
+.btn-sm {
+    font-size: 9px !important;
+}
+
+.btn-secondary {
+    background-color: var(--primary-color);
+    border: none;
+    color: #0d0d0d;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: 0.2s ease;
+    cursor: pointer;
+    font-size: 9px !important;
+}
+
+.btn-secondary:hover {
+    background-color: #00b8cc;
+    color: #fff;
+}
+
+.btn-outline-secondary {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    background: transparent;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--primary-color);
+    color: #0d0d0d;
+}
+
+.btn-sm {
+    font-size: 9px !important;
+}
+/* ===== Status Badges ===== */
+.status-badge {
+    padding: 3px 8px;       /* smaller padding */
+    border-radius: 12px;    /* tighter pill shape */
+    font-size: 7px;         /* smaller font */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.status-verified {
+    background-color: rgba(0, 255, 157, 0.08);
+    color: var(--success-color);
+}
+
+.status-not-verified {
+    background-color: rgba(255, 76, 76, 0.08);
+    color: var(--danger-color);
+}
+
+.status-processing {
+    background-color: rgba(255, 176, 32, 0.08);
+    color: var(--warning-color);
+}
+
+
+/* ===== Tables ===== */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--secondary-color);
+    font-size: 9px;
+}
+
+#paginationContainer {
+    color: #fff !important;
+    font-size: 12px;
+}
+
+#prevPage {
+    font-size: 9px;
+
+}
+
+#nextPage {
+    font-size: 9px;
+}
+
+.table th {
+    font-weight: 600;
+    color: #fff !important;
+    background-color: #182342 !important;
+    text-transform: uppercase;
+    padding: 10px 8px;
+    text-align: left;
+}
+
+.table td {
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    background-color: #182342 !important;
+    padding: 10px 8px;
+    color: #fff !important;
+}
+
+/* Responsive tables */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* ===== Terminal ===== */
+.terminal {
+    background-color: #0C1425;
+    color: #e0e0e0;
+    font-family: 'Courier New', monospace;
+    height: 250px;
+    overflow-y: auto;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.05);
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+.terminal-info { color: var(--primary-color); }
+.terminal-success { color: var(--success-color); }
+.terminal-warning { color: var(--warning-color); }
+.terminal-error { color: var(--danger-color); }
+
+/* ===== Hero Section ===== */
+.hero-section {
+    background: #182342 !important;
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 12px;
+    padding: 30px 20px;
+    margin-bottom: 20px;
+    color: white !;
+    text-align: center;
+}
+
+#AccessTokenContainer {
+    padding: 5px 13px 5px 13px !important;
+    font-size: 12px;
+}
+
+.hero-section h1 {
+    font-size: 17px;
+    color: #fff;
+    margin: 0 0 10px;
+}
+
+.hero-section p {
+    font-size: 10px;
+    color: var(--secondary-color);
+    margin: 0;
+}
+
+/* ===== Editable Cells ===== */
+.editable-cell {
+    background-color: rgba(0, 229, 255, 0.05);
+    border: 1px dashed rgba(255,255,255,0.1);
+    padding: 6px;
+    border-radius: 6px;
+    color: white;
+}
+
+/* ===== Action buttons ===== */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .action-buttons .btn {
+        width: 100%;
+    }
+
+    .terminal {
+        height: 200px;
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .hero-section h1 {
+        font-size: 18px;
+    }
+}
